@@ -1,6 +1,6 @@
 #include <iostream>
-#include <glew.h>
-#include <glfw3.h>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 using namespace std;
 
@@ -12,6 +12,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     std::cout<<"ESC"<<mode;
 }
 
+// 画一个三角形和一个梯形
 // https://www.cnblogs.com/shayue/p/Mac-CLion-xiaOpenGL-huan-jing-pei-zhi.html
 int draw_shape()
 {

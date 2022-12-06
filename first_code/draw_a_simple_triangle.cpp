@@ -1,3 +1,5 @@
+// 画一个三角形
+
 #include <iostream>
 #include <glad/glad.h>
 #include <glfw3.h>
