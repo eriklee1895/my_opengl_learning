@@ -1,3 +1,4 @@
+// 演示glfw+glew创建window,绘制图形
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>

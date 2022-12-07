@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(first_opengl_code)
+project(triangle_demo)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -15,10 +15,10 @@ set(GLFW_LINK /usr/local/lib/libglfw.dylib)
 link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK})
 
 # 执行编译命令
-set(SOURCE_FILES glfw_glad_demo.cpp glfw_glew_demo.cpp ../lib/glad.c main.cpp)
-add_executable(first_opengl_code ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp)
+add_executable(triangle_demo ${SOURCE_FILES})
 
 if (APPLE)
-    target_link_libraries(first_opengl_code "-framework OpenGL")
-    target_link_libraries(first_opengl_code "-framework GLUT")
+    target_link_libraries(triangle_demo "-framework OpenGL")
+    target_link_libraries(triangle_demo "-framework GLUT")
 endif ()

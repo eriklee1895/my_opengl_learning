@@ -4,6 +4,8 @@
 using namespace std;
 
 int main() {
+    // 使用glfw+glew
     draw_shape();
-//    draw_simple_triangle();
+    // 使用glfw+glad
+    draw_simple_triangle();
 }

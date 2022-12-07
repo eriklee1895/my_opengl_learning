@@ -1,4 +1,4 @@
-// 画一个三角形
+// 演示glfw+glad创建window,绘制图形
 
 #include <iostream>
 #include <glad/glad.h>
