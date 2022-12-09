@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(glfw_window_demo)
+project(shader_demo)
 
 set(CMAKE_CXX_STANDARD 20)
 

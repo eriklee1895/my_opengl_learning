@@ -16,9 +16,9 @@ link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK})
 
 # 执行编译命令
 set(SOURCE_FILES main.cpp)
-add_executable(triangle_demo ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 if (APPLE)
-    target_link_libraries(triangle_demo "-framework OpenGL")
-    target_link_libraries(triangle_demo "-framework GLUT")
+    target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
+    target_link_libraries(${PROJECT_NAME} "-framework GLUT")
 endif ()

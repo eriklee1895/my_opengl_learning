@@ -18,9 +18,9 @@ link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK} ${SDL2_LINK})
 
 # 执行编译命令
 set(SOURCE_FILES main.cpp)
-add_executable(sdl_window_demo ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 if (APPLE)
-    target_link_libraries(sdl_window_demo "-framework OpenGL")
-    target_link_libraries(sdl_window_demo "-framework GLUT")
+    target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
+    target_link_libraries(${PROJECT_NAME} "-framework GLUT")
 endif ()

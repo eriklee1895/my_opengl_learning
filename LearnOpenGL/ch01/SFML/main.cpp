@@ -10,6 +10,7 @@
 const GLint WIDTH = 800, HEIGHT = 600;
 
 int main() {
+    // 创建一个窗口的上下文
     sf::ContextSettings settings;
     settings.depthBits = 24;
     settings.stencilBits = 8;
@@ -17,9 +18,9 @@ int main() {
     settings.minorVersion = 3;
     settings.attributeFlags = sf::ContextSettings::Core;
 
+    // 创建一个window
     sf::Window window(sf::VideoMode(WIDTH, HEIGHT, 32), "OpenGL SFML", sf::Style::Titlebar | sf::Style::Close,
                       settings);
-
     glewExperimental = GL_TRUE;
 
     if (GLEW_OK != glewInit()) {
@@ -30,13 +31,12 @@ int main() {
     bool running = true;
 
     while (running) {
+        // 窗口事件
         sf::Event windowEvent;
-
         while (window.pollEvent(windowEvent)) {
             switch (windowEvent.type) {
                 case sf::Event::Closed:
                     running = false;
-
                     break;
             }
         }
@@ -45,7 +45,6 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         // draw OpenGL
-
         window.display();
     }
 
