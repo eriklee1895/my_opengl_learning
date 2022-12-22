@@ -15,10 +15,15 @@ set(GLFW_LINK /usr/local/lib/libglfw.dylib)
 link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK})
 
 # 执行编译命令
-set(SOURCE_FILES glfw_glad_demo.cpp glfw_glew_demo.cpp ../lib/glad.c main.cpp ../LearnOpenGL/ch02/Shaders/Shader.h)
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-
+add_executable(glfw_glad_demo glfw_glad_demo.cpp ../lib/glad.c ../LearnOpenGL/ch02/Shaders/Shader.h)
 if (APPLE)
-    target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
-    target_link_libraries(${PROJECT_NAME} "-framework GLUT")
+    target_link_libraries(glfw_glad_demo "-framework OpenGL")
+    target_link_libraries(glfw_glad_demo "-framework GLUT")
 endif ()
+
+add_executable(glfw_glew_demo glfw_glew_demo.cpp ../lib/glad.c ../LearnOpenGL/ch02/Shaders/Shader.h)
+if (APPLE)
+    target_link_libraries(glfw_glew_demo "-framework OpenGL")
+    target_link_libraries(glfw_glew_demo "-framework GLUT")
+endif ()
+

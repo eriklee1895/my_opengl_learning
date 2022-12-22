@@ -4,6 +4,8 @@
 #include <glad/glad.h>
 #include <glfw3.h>
 
+using namespace std;
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
@@ -181,4 +183,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+}
+
+int main() {
+    // 使用glfw+glad
+    draw_simple_triangle();
 }

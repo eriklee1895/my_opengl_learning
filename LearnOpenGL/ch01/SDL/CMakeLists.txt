@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 # 添加头文件
 set(GLEW_H /usr/local/include/GL)
 set(GLFW_H /usr/local/include/GLFW)
-set(GLFW_H /usr/local/include/SDL2)
-include_directories(${GLEW_H} ${GLFW_H})
+set(SDL2_H /usr/local/include/SDL2)
+include_directories(${GLEW_H} ${GLFW_H} ${SDL2_H})
 include_directories(/usr/local/include)
 
 # 添加目标链接

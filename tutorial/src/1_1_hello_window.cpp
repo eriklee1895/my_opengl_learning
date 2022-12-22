@@ -1,5 +1,7 @@
 // 来自https://learnopengl-cn.github.io/
 // 演示glfw创建window的基本流程
+// https://learnopengl-cn.github.io/01%20Getting%20started/03%20Hello%20Window
+// https://github.com/JoeyDeVries/LearnOpenGL/tree/master/src/1.getting_started/1.2.hello_window_clear
 
 #include <iostream>
 // GLAD的头文件包含了正确的OpenGL头文件（例如GL/gl.h），

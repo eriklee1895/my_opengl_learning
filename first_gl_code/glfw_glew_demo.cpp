@@ -63,3 +63,8 @@ int draw_shape()
     glfwTerminate();
     return 0;
 }
+
+int main() {
+    // 使用glfw+glew
+    draw_shape();
+}
